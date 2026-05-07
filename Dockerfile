@@ -1,11 +1,17 @@
 FROM debian:bookworm-slim
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    baresip baresip-modules \
-    ca-certificates \
-    iproute2 net-tools dnsutils \
-    tcpdump \
-  && rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+      baresip \
+      ca-certificates \
+      iproute2 \
+      net-tools \
+      dnsutils \
+      tcpdump; \
+    rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /root/.baresip
 
