@@ -1,0 +1,9 @@
+log_level         0
+sip_transports    udp
+nat               yes
+
+audio_player      null
+audio_source      null
+
+audio_codecs      PCMU/8000,PCMA/8000
+answer_mode       auto
