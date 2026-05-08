@@ -2,6 +2,17 @@ log_level         0
 sip_transports    udp
 nat               yes
 
+# caminho correto no Ubuntu do Railway
+module_path       /usr/lib/baresip/modules
+
+# módulos essenciais p/ telefonia básica + NAT traversal
+module            account.so
+module            g711.so
+module            stun.so
+module            turn.so
+module            ice.so
+
+# sem device de áudio
 audio_player      null
 audio_source      null
 
