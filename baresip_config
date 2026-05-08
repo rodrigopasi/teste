@@ -1,3 +1,12 @@
+module_path /usr/lib/x86_64-linux-gnu/baresip/modules
+
+module g711.so
+module stun.so
+module turn.so
+module natbd.so
+module auconv.so
+module uuid.so
+
 log_level         0
 sip_transports    udp
 nat               yes
