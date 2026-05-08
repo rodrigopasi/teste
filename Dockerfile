@@ -36,4 +36,4 @@ RUN mkdir -p /root/.baresip
 COPY baresip_config /root/.baresip/config
 COPY baresip_accounts /root/.baresip/accounts
 
-CMD ["bash", "-lc", "baresip -v -f /root/.baresip"]
+CMD ["bash", "-lc", "tcpdump -n -i any udp and not port 50068 & baresip -v -f /root/.baresip"]
